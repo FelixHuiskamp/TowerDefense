@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 5f;
     public float lifetime = 2f;
-
+    public float damage = 20f;
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -16,6 +16,11 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        EnemyAlien enemy = other.GetComponent<EnemyAlien>();
+      if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
       Destroy(gameObject);  
     }
 }

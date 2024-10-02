@@ -14,10 +14,11 @@ public class AlienAttack : MonoBehaviour
     private float nextAttackTime = 0f;
     private TowerHealth towerHealth;
 
-    void start()
+    void Start()
     {
         if (tower != null) 
-        { 
+        {
+            Debug.Log("test");
             towerHealth = tower.GetComponent<TowerHealth>();
         }
     }
@@ -42,8 +43,10 @@ public class AlienAttack : MonoBehaviour
     {
         if (Time.deltaTime >= nextAttackTime) 
         {
+            Debug.Log(towerHealth.name);
             towerHealth.TakeDamage(damage);
-            Debug.Log("Alien valt toren aan!"); 
+            Debug.Log("Alien valt toren aan!");
+            Debug.Log("Schade toegebracht aan toren:" + damage);
 
             nextAttackTime = Time.time + attackcooldown;
         }

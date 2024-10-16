@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 879783661898071629}
   - component: {fileID: 2083767068818235045}
   - component: {fileID: 8894814313284886856}
+  - component: {fileID: -7817744050340345082}
   m_Layer: 0
   m_Name: turret_and_laser
   m_TagString: Player
@@ -165,6 +166,23 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &-7817744050340345082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854827119310362523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c988fac98750941a3d449d5877a271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 0}
+  speed: 3
+  attackrange: 1
+  damage: 10
+  attackcooldown: 1
 --- !u!1 &8858855622704494541
 GameObject:
   m_ObjectHideFlags: 0

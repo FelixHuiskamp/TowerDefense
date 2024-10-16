@@ -5,6 +5,10 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    [SerializeField]
+    private List<GameObject> towers = new List<GameObject>();
+
+    public GameObject tower;
     public Transform[] spawnpoints;
     public int enemiesPerWave = 5;
     public float timeBetweenSpawns = 1f;
@@ -40,9 +44,23 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
 
-        spawnWave = false;
+        spawningWave = false;
         Debug.Log("Wave " + waveNumber + "compleet!"); 
 
-        void spawnEnemy () { }
+        void SpawnEnemy() 
+        {
+            int spawnIndex = Random.Range(0, spawnpoints.Length);
+            Transform spawnPoint = spawnpoints[spawnIndex];
+
+            GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            enemy.GetComponent<AlienAttack>().towers = towers; 
+
+            enemy.GetComponent<EnemyAlien>().OnDeath += EnemyDied;
+        }
+
+        void EnemyDied()
+        {
+            enemiesRemaining--;
+        }
     }
 }

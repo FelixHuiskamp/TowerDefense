@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6238611172571436381}
   m_Layer: 0
   m_Name: Enemy_alien
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  pointsWorth: 10
 --- !u!114 &-6238611172571436381
 MonoBehaviour:
   m_ObjectHideFlags: 0

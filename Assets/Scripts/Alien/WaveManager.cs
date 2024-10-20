@@ -13,11 +13,14 @@ public class WaveManager : MonoBehaviour
     public int enemiesPerWave = 5;
     public float timeBetweenSpawns = 1f;
 
+    private int currentWave = 1;
     private int enemiesRemaining;
     private int  waveNumber = 0;
     private bool spawningWave = false;
     void Start()
     {
+
+        TowerSpawner.OnSpawnTower += AddTower;
         StartCoroutine(StartWave());
     }
 
@@ -28,6 +31,10 @@ public class WaveManager : MonoBehaviour
         {
             StartCoroutine(StartWave());
         }
+    }
+    void AddTower(GameObject tower) 
+    {
+        towers.Add(tower);
     }
 
     IEnumerator StartWave() 

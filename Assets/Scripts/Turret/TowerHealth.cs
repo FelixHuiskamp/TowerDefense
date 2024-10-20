@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TowerHealth : MonoBehaviour
 {
     public int health = 100;
+
+
+
+    void Start()
+    {
+        GameManager.instance.AddTower();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -20,6 +28,9 @@ public class TowerHealth : MonoBehaviour
     void DestroyTower()
     {
         Debug.Log("De toren is vernietigd!");
+        GameManager.instance.RemoveTower();
         Destroy(gameObject);
     }
+
+
 }

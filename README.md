@@ -35,7 +35,7 @@ Dit is de [ROOT](https://github.com/FelixHuiskamp/TowerDefense/tree/main/Assets)
 
 Ik heb AI gebruikt om een sprite te maken voor de turret. De alien sprite heb ik van internet gehaald.
 
-![Textures Sprites]()
+![Sprites gif](https://github.com/FelixHuiskamp/TowerDefense/blob/main/ScreenShots/TowerDefenseGame.gif?raw=true)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 

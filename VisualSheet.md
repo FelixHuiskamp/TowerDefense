@@ -1,2 +1,2 @@
-![Visual Sheet](./VisualSheetTD.png)
-![Visual Sheet2](./TurretTargeting.png)
+![Visual Sheet](/img/VisualSheetTD.png)
+![Visual Sheet2](/img/TurretTargeting.png)

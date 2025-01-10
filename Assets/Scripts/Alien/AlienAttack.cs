@@ -6,12 +6,19 @@ using UnityEngine;
 public class AlienAttack : MonoBehaviour
 {
     [HideInInspector]
-    public List<GameObject> towers = new List<GameObject>();
-    public GameObject currentTower;
-    public float speed = 3f;
-    public float attackrange = 1f;
-    public int damage = 10;
-    public float attackcooldown = 1f;
+    private List<GameObject> towers = new List<GameObject>();
+    public List<GameObject> Towers
+    {
+        get {  return towers; }
+
+        set { towers = value; }
+    }
+
+    private GameObject currentTower;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private float attackrange = 1f;
+    [SerializeField] private int damage = 10;
+    [SerializeField] private float attackcooldown = 1f;
 
     private float nextAttackTime = 0f;
     private TowerHealth towerHealth;

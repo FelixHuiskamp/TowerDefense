@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class AutoTurret : MonoBehaviour
 {
-    public GameObject proctilePrefab;
-    public Transform firePoint; 
-    public float fireRate = 1f;
-    public float range = 5f;
-    public LayerMask alienLayer;
+    [SerializeField] private GameObject proctilePrefab;
+    [SerializeField] private Transform firePoint; 
+    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float range = 5f;
+    [SerializeField] private LayerMask alienLayer;
 
     private float fireCountdown = 0f;
 

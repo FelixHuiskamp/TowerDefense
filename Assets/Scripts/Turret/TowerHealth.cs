@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TowerHealth : MonoBehaviour
 {
-    public int health = 100;
+    [SerializeField] private int health = 100;
 
 
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyAlien : MonoBehaviour
 {
-    public float health = 100f;
-    public int pointsWorth = 10;
+    [SerializeField] private float health = 100f;
+    [SerializeField] private int pointsWorth = 10;
     public delegate void DeathAction();
     public event DeathAction OnDeath;
     public void TakeDamage(float damageAmount)

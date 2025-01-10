@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int towerCount = 0;
-    public GameObject gameOverScreen; 
+    [SerializeField]private int towerCount = 0;
+    [SerializeField]private GameObject gameOverScreen; 
     void Awake()
     {
         if (instance == null)

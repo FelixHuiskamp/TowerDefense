@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    private GameObject enemyPrefab;
     [SerializeField]
     private List<GameObject> towers = new List<GameObject>();
 
-    public GameObject tower;
-    public Transform[] spawnpoints;
-    public int enemiesPerWave = 5;
-    public float timeBetweenSpawns = 1f;
+    private GameObject tower;
+    private Transform[] spawnpoints;
+    private int enemiesPerWave = 5;
+    private float timeBetweenSpawns = 1f;
 
     private int currentWave = 1;
     private int enemiesRemaining;
@@ -60,7 +60,7 @@ public class WaveManager : MonoBehaviour
             Transform spawnPoint = spawnpoints[spawnIndex];
 
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-            enemy.GetComponent<AlienAttack>().towers = towers; 
+            enemy.GetComponent<AlienAttack>().Towers = towers; 
 
             enemy.GetComponent<EnemyAlien>().OnDeath += EnemyDied;
         }

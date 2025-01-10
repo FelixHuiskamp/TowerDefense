@@ -7,9 +7,14 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public int score = 0;
-    public TextMeshProUGUI scoreText;
+    private int score = 0;
+    private TextMeshProUGUI scoreText;
 
+    public int Score
+    {
+        get { return score; }
+        set { score = value; }
+    }
     void Awake()
     {
         if (instance == null)

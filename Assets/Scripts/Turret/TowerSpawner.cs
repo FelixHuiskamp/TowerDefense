@@ -7,13 +7,13 @@ using System;
 public class TowerSpawner : MonoBehaviour
 {
     public static event Action<GameObject> OnSpawnTower;
-    public GameObject towerPrefab;
-    public Vector2 minSpawnPosition; 
-    public Vector2 maxSpawnPosition;
-    public int towerCost = 50;
+    [SerializeField] private GameObject towerPrefab;
+    private Vector2 minSpawnPosition; 
+    private Vector2 maxSpawnPosition;
+    [SerializeField] private int towerCost = 50;
     public void SpawnTower()
     {
-        if (ScoreManager.instance.score >= towerCost)
+        if (ScoreManager.instance.Score >= towerCost)
         {
             Vector2 randomPosition = GetRandomPosition();
 

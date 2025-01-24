@@ -24,7 +24,6 @@ classDiagram
 
         class TowerHealth {
         -int health
-        +void Start()
         +void TakeDamage(int damage)
         -void DestroyTower()
     }
@@ -58,8 +57,6 @@ classDiagram
         -int enemiesRemaining
         -int waveNumber
         -bool spawningWave
-        +void Start()
-        +void Update()
         +void AddTower(GameObject tower)
         +IEnumerator StartWave()
         -void SpawnEnemy()
@@ -76,8 +73,6 @@ classDiagram
         -float attackcooldown
         -float nextAttackTime
         -TowerHealth towerHealth
-        +void Start()
-        +void Update()
         -void MoveTowardsTower()
         -void AttackTower()
     }
@@ -89,7 +84,6 @@ classDiagram
         -float range
         -LayerMask alienLayer
         -float fireCountdown
-        +void Update()
         -void AimAtTarget(Transform target)
         -void Shoot()
         -void OnDrawGizmosSelected()
@@ -99,7 +93,6 @@ classDiagram
         -float speed
         -float lifetime
         -float damage
-        +void Update()
         +void OnTriggerEnter2D(Collider2D other)
     }
 
@@ -112,19 +105,19 @@ classDiagram
 
 GameManager --|> TowerHealth
 
-TowerSpawner <|.. SpawnPoint 
+TowerSpawner <.. SpawnPoint 
 
 ScoreManager <|.. EnemyAlien
 
-WaveManager ..|> EnemyAlien
+WaveManager ..> EnemyAlien
 
-AlienAttack ..|> AutoTurret
+AlienAttack ..> AutoTurret
 
-Projectile ..|> AutoTurret 
+Projectile ..> AutoTurret 
 
-TowerHealth ..|> AutoTurret
+TowerHealth ..> AutoTurret
 
-EnemyAlien ..|> AutoTurret
+EnemyAlien ..> AutoTurret
 
 TowerHealth ..|> AlienAttack
 

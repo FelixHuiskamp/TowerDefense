@@ -675,7 +675,7 @@ MonoBehaviour:
   m_text: Game Over!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529725abc87dc9e48b93300c06dc5b55, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 529725abc87dc9e48b93300c06dc5b55, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1205,8 +1205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 7854827119310362523, guid: 18673d7eb0330054c8c0ab37987a0f86, type: 3}
-  minSpawnPosition: {x: -5, y: -5}
-  maxSpawnPosition: {x: 5, y: 5}
   towerCost: 50
 --- !u!4 &1091584453
 Transform:
@@ -1283,8 +1281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3062a1c461e6914dba7724b5d7cb828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  scoreText: {fileID: 1368713064}
 --- !u!4 &1213236133
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,14 +1527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83682efdf5ff830438631d4bd891586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4090856570016836845, guid: a9b65b5f5d44dc544ae38223f17a9af2, type: 3}
   towers:
   - {fileID: 63338965}
-  tower: {fileID: 7854827119310362523, guid: 18673d7eb0330054c8c0ab37987a0f86, type: 3}
-  spawnpoints:
-  - {fileID: 1110629533}
-  enemiesPerWave: 5
-  timeBetweenSpawns: 0
 --- !u!4 &1867283430
 Transform:
   m_ObjectHideFlags: 0
